@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Meats</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;600;700;800&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0d0d0d;
+      color: #f5f1e8;
+      font-family: 'Montserrat', Arial, sans-serif;
+      padding: 18px 10px;
+    }
+
+    .page {
+      max-width: 1050px;
+      margin: auto;
+      padding: 22px 18px;
+      background: #121212;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 22px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 800;
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
+
+    .logo-area {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .logo-area img {
+      width: 270px;
+      max-width: 85%;
+    }
+
+    h1, h2 {
+      font-family: 'Cinzel', Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 31px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #d4af37;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .ayce-note {
+      max-width: 720px;
+      margin: 0 auto 16px;
+      text-align: center;
+      color: #b8b1a7;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #d4af37, transparent);
+      margin: 16px 0;
+    }
+
+    .meat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .meat-card {
+      display: grid;
+      grid-template-columns: 115px 1fr;
+      gap: 12px;
+      align-items: center;
+      background: linear-gradient(145deg, #101010, #181818);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: 14px;
+      padding: 10px;
+      min-height: 120px;
+    }
+
+    .meat-img {
+      width: 100%;
+      height: 95px;
+      object-fit: cover;
+      border-radius: 10px;
+      background: #222;
+      border: 1px solid rgba(212, 175, 55, 0.16);
+    }
+
+    .meat-info h2 {
+      text-align: left;
+      font-size: 17px;
+      color: #f5f1e8;
+      margin-bottom: 6px;
+      letter-spacing: 1.4px;
+      line-height: 1.15;
+    }
+
+    .meat-info p {
+      color: #b8b1a7;
+      font-size: 11.5px;
+      line-height: 1.35;
+      margin-bottom: 7px;
+    }
+
+    .ayce-label {
+      color: #d4af37;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .wagyu-price {
+      display: inline-block;
+      margin-bottom: 6px;
+      color: #d4af37;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .addon-label {
+      color: #86efac;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 20px 12px;
+      }
+
+      .logo-area img {
+        width: 250px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .meat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .meat-card {
+        grid-template-columns: 105px 1fr;
+      }
+
+      .meat-img {
+        height: 90px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <a class="back-link" href="index.html">← Back to Main Menu</a>
+
+    <div class="logo-area">
+      <img src="logo.png" alt="Boiling Pot & Boba Street Logo">
+    </div>
+
+    <h1>Premium Meats</h1>
+    <p class="subtitle">Premium level includes all Regular meats plus Premium selections.</p>
+    <p class="ayce-note">
+      These selections may be reordered during your All You Can Eat dining time.
+    </p>
+
+    <div class="divider"></div>
+
+    <section class="meat-grid">
+
+      <div class="meat-card">
+        <img class="meat-img" src="lamb-shoulder.jpg" alt="Sliced Lamb Shoulder">
+        <div class="meat-info">
+          <h2>Sliced Lamb Shoulder</h2>
+          <p>Tender sliced lamb with a rich, savory flavor.</p>
+          <span class="ayce-label">Regular Selection</span>
+        </div>
+      </div>
+
+      <div class="meat-card">
+        <img class="meat-img" src="angus-beef.jpg" alt="Angus Beef">
+        <div class="meat-info">
+          <h2>Angus Beef</h2>
+          <p>Classic hot pot beef with balanced flavor and texture.</p>
+          <span class="ayce-label">Regular Selection</span>
+        </div>
+      </div>
+
+      <div class="meat-card">
+        <img class="meat-img" src="jumbo-shrimp.jpg" alt="Jumbo Shrimp">
+        <div class="meat-info">
+          <h2>Jumbo Shrimp</h2>
+          <p>Served with shell and head.</p>
+          <span class="ayce-label">Regular Selection</span>
+        </div>
+      </div>
+
+      <div class="meat-card">
+        <img class="meat-img" src="marinated-beef-rib.jpg" alt="Marinated Beef Rib">
+        <div class="meat-info">
+          <h2>Marinated Beef Rib</h2>
+          <p>Marinated beef rib prepared for rich hot pot flavor.</p>
+          <span class="ayce-label">Premium Selection</span>
+        </div>
+      </div>
+
+      <div class="meat-card">
+        <img class="meat-img" src="beef-belly.jpg" alt="Beef Belly">
+        <div class="meat-info">
+          <h2>Beef Belly</h2>
+          <p>Thin sliced beef belly with a tender, fatty texture.</p>
+          <span class="ayce-label">Premium Selection</span>
+        </div>
+      </div>
+
+      <div class="meat-card">
+        <img class="meat-img" src="berkshire-pork-belly.jpg" alt="Berkshire Pork Belly">
+        <div class="meat-info">
+          <h2>Berkshire Pork Belly</h2>
+          <p>Rich pork belly with a soft and savory bite.</p>
+          <span class="ayce-label">Premium Selection</span>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <h2 class="section-heading">Wagyu Add-Ons</h2>
+    <p class="ayce-note">
+      Wagyu selections are available per order and are not included with All You Can Eat.
+    </p>
+
+    <section class="meat-grid">
+
+      <div class="meat-card">
+        <img class="meat-img" src="a5-wagyu-ribeye.jpg" alt="A5 Wagyu Ribeye Beef">
+        <div class="meat-info">
+          <h2>A5 Wagyu Ribeye Beef</h2>
+          <div class="wagyu-price">$59.95</div>
+          <p>Premium Japanese A5 Wagyu Ribeye available per order.</p>
+          <span class="ayce-label addon-label">Add-On Only • Not AYCE</span>
+        </div>
+      </div>
+
+      <div class="meat-card">
+        <img class="meat-img" src="premium-wagyu-beef.jpg" alt="Premium Wagyu Beef">
+        <div class="meat-info">
+          <h2>Premium Wagyu Beef</h2>
+          <div class="wagyu-price">$38.95</div>
+          <p>Premium Wagyu beef selection available per order.</p>
+          <span class="ayce-label addon-label">Add-On Only • Not AYCE</span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</body>
+</html>

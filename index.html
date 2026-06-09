@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boiling Pot & Boba Street AYCE Menu</title>
+  <title>Boiling Pot & Boba Street</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;600;700;800&display=swap');
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,9 +16,11 @@
 
     body {
       min-height: 100vh;
-      background: #0f0f0f;
+      background:
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.12), transparent 32%),
+        #0d0d0d;
       color: #f5f1e8;
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       padding: 24px 14px;
     }
 
@@ -24,28 +28,22 @@
       max-width: 1050px;
       margin: auto;
       padding: 34px 24px;
-      background: #151515;
-      border: 1px solid #2b2b2b;
-      border-radius: 22px;
+      background:
+        linear-gradient(rgba(18,18,18,0.94), rgba(18,18,18,0.96)),
+        radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: auto, 8px 8px;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 24px;
     }
 
     .logo-area {
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .logo-area img {
-      width: 240px;
-      max-width: 80%;
-      margin-bottom: 14px;
-    }
-
-    .subtitle {
-      color: #d4af37;
-      letter-spacing: 4px;
-      font-size: 13px;
-      text-transform: uppercase;
-      font-weight: bold;
+      width: 250px;
+      max-width: 82%;
     }
 
     .divider {
@@ -55,65 +53,86 @@
     }
 
     h1, h2, h3 {
-      font-family: Georgia, 'Times New Roman', serif;
+      font-family: 'Cinzel', Georgia, serif;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: normal;
+      letter-spacing: 4px;
     }
 
     .rules h1 {
       text-align: center;
       color: #f5f1e8;
-      font-size: 42px;
-      margin-bottom: 18px;
+      font-size: 44px;
+      margin-bottom: 6px;
+    }
+
+    .rules-subtitle {
+      text-align: center;
+      color: #a92b24;
+      font-weight: 800;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
     }
 
     .rules-box {
-      max-width: 850px;
+      max-width: 870px;
       margin: auto;
       padding: 24px;
-      background: #101010;
-      border: 1px solid #2f2f2f;
+      background: #111;
+      border: 1px solid rgba(212, 175, 55, 0.32);
       border-radius: 18px;
     }
 
-    .rules-box ol {
-      padding-left: 22px;
-      line-height: 1.8;
-      color: #ddd6c9;
+    .rule {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #e7dfd2;
+      line-height: 1.55;
       font-size: 15px;
       font-weight: 600;
     }
 
-    .rules-box li {
-      margin-bottom: 9px;
+    .rule:last-child {
+      border-bottom: none;
+    }
+
+    .number {
+      color: #d4af37;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
 
     .badge {
       display: inline-block;
-      color: #0f0f0f;
-      background: #d4af37;
+      color: #d4af37;
+      border: 1px solid rgba(212, 175, 55, 0.75);
       padding: 2px 8px;
-      border-radius: 999px;
+      border-radius: 4px;
       font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 1px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
       white-space: nowrap;
+      background: rgba(212, 175, 55, 0.08);
     }
 
     .section-title {
       text-align: center;
       margin: 44px 0 24px;
+      position: relative;
     }
 
     .section-title h2 {
-      font-size: 32px;
+      font-size: 33px;
       color: #f5f1e8;
-      margin-bottom: 10px;
     }
 
     .section-title p {
+      margin-top: 8px;
       color: #a8a29e;
       font-size: 14px;
     }
@@ -128,26 +147,28 @@
       display: block;
       text-decoration: none;
       color: #f5f1e8;
-      background: #101010;
-      border: 1px solid #2f2f2f;
+      background: linear-gradient(145deg, #101010, #181818);
+      border: 1px solid rgba(212, 175, 55, 0.25);
       border-radius: 18px;
-      padding: 30px 24px;
+      padding: 32px 24px;
       transition: 0.2s ease;
+      min-height: 190px;
     }
 
     .card:hover {
       transform: translateY(-3px);
       border-color: #d4af37;
+      background: #171717;
     }
 
     .card h3 {
-      font-size: 34px;
-      margin-bottom: 10px;
+      font-size: 36px;
+      margin-bottom: 12px;
     }
 
     .card p {
       color: #b8b1a7;
-      line-height: 1.5;
+      line-height: 1.55;
       font-size: 15px;
     }
 
@@ -156,7 +177,7 @@
     }
 
     .premium {
-      border-color: rgba(212, 175, 55, 0.65);
+      border-color: rgba(212, 175, 55, 0.75);
     }
 
     .premium h3 {
@@ -164,18 +185,19 @@
     }
 
     .button-text {
-      margin-top: 18px;
+      margin-top: 20px;
       color: #d4af37;
       font-size: 13px;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
     }
 
     .soup-card {
-      max-width: 520px;
+      max-width: 560px;
       margin: auto;
       text-align: center;
+      min-height: auto;
     }
 
     .notice {
@@ -193,6 +215,7 @@
       font-size: 12px;
       letter-spacing: 4px;
       text-transform: uppercase;
+      font-weight: 700;
     }
 
     @media (max-width: 720px) {
@@ -204,12 +227,25 @@
         font-size: 34px;
       }
 
+      .rules-subtitle {
+        letter-spacing: 5px;
+      }
+
+      .rule {
+        grid-template-columns: 34px 1fr;
+        font-size: 14px;
+      }
+
       .level-grid {
         grid-template-columns: 1fr;
       }
 
       .card h3 {
         font-size: 30px;
+      }
+
+      .section-title h2 {
+        font-size: 27px;
       }
     }
   </style>
@@ -220,25 +256,54 @@
 
     <div class="logo-area">
       <img src="logo.png" alt="Boiling Pot & Boba Street Logo">
-      <div class="subtitle">All You Can Eat Hot Pot Menu</div>
     </div>
 
     <div class="divider"></div>
 
     <section class="rules">
-      <h1>AYCE Rules</h1>
+      <h1>All You Can Eat</h1>
+      <div class="rules-subtitle">Rules</div>
 
       <div class="rules-box">
-        <ol>
-          <li>AYCE is limited to <span class="badge">90 minutes per table</span>.</li>
-          <li>All guests at the table must choose the same AYCE level: <span class="badge">Regular or Premium</span>.</li>
-          <li>Guests will be charged by the stated size of the party.</li>
-          <li>A <span class="badge">15% gratuity</span> will be added to parties of 6 or more. Gratuity payment must be made using one payment type only.</li>
-          <li>Any leftovers will incur a <span class="badge">$7 charge per person</span>.</li>
-          <li><span class="badge">No to-go boxes</span> can be provided for leftover AYCE food.</li>
-          <li>Dinner pricing applies all day on <span class="badge">weekends & holidays</span>.</li>
-          <li>A maximum of <span class="badge">2 credit cards</span> may be used per table.</li>
-        </ol>
+        <div class="rule">
+          <div class="number">01</div>
+          <div>All you can eat is limited to <span class="badge">90 minutes per table</span>.</div>
+        </div>
+
+        <div class="rule">
+          <div class="number">02</div>
+          <div>All guests at the table must choose the same level: <span class="badge">Regular or Premium</span>.</div>
+        </div>
+
+        <div class="rule">
+          <div class="number">03</div>
+          <div>Guests will be charged by the <span class="badge">stated size of the party</span>.</div>
+        </div>
+
+        <div class="rule">
+          <div class="number">04</div>
+          <div>A <span class="badge">15% gratuity</span> will be added to parties of 6 or more. Gratuity payment must be made using <span class="badge">one payment type only</span>.</div>
+        </div>
+
+        <div class="rule">
+          <div class="number">05</div>
+          <div>Any leftovers will incur a <span class="badge">$7 additional charge per person</span>.</div>
+        </div>
+
+        <div class="rule">
+          <div class="number">06</div>
+          <div><span class="badge">No take-out/to-go boxes</span> can be provided for leftover food.</div>
+        </div>
+
+        <div class="rule">
+          <div class="number">07</div>
+          <div><span class="badge">Dinner pricing</span> applies all day on weekends, Saturday/Sunday, and holidays.</div>
+        </div>
+
+        <div class="rule">
+          <div class="number">08</div>
+          <div>A maximum of <span class="badge">2 credit cards</span> may be used per table.</div>
+        </div>
       </div>
     </section>
 

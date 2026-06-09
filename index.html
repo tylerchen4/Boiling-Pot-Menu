@@ -218,18 +218,33 @@
     .discount-box {
       max-width: 900px;
       margin: 18px auto 0;
-      border: 1px dashed rgba(212, 175, 55, 0.45);
+      border: 1px solid rgba(74, 222, 128, 0.4);
+      background: rgba(74, 222, 128, 0.08);
       border-radius: 14px;
-      padding: 14px;
+      padding: 16px;
       text-align: center;
-      color: #d4af37;
-      font-size: 13px;
-      font-weight: 800;
-      line-height: 1.7;
+      color: #86efac;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.8;
+    }
+
+    .discount-box strong {
+      color: #bbf7d0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 15px;
     }
 
     .discount-box span {
-      color: #f5f1e8;
+      color: white;
+      font-weight: 900;
+    }
+
+    .discount-box small {
+      color: #cfcfcf;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
     .soup-notice {
@@ -312,9 +327,9 @@
       margin-top: 30px;
       text-align: center;
       color: #b8b1a7;
-      font-size: 12.5px;
-      font-weight: 600;
-      line-height: 1.65;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.7;
     }
 
     @media (max-width: 720px) {
@@ -403,11 +418,11 @@
 
           <div class="price-row">
             <div class="price-box">
-              <span class="price-label">Lunch</span>
+              <span class="price-label">Lunch<br>11 AM - 3 PM</span>
               <span class="price-value">$19.95</span>
             </div>
             <div class="price-box">
-              <span class="price-label">Dinner</span>
+              <span class="price-label">Dinner<br>3 PM - Close</span>
               <span class="price-value">$26.95</span>
             </div>
           </div>
@@ -421,11 +436,11 @@
 
           <div class="price-row">
             <div class="price-box">
-              <span class="price-label">Lunch</span>
+              <span class="price-label">Lunch<br>11 AM - 3 PM</span>
               <span class="price-value">$25.95</span>
             </div>
             <div class="price-box">
-              <span class="price-label">Dinner</span>
+              <span class="price-label">Dinner<br>3 PM - Close</span>
               <span class="price-value">$32.95</span>
             </div>
           </div>
@@ -435,11 +450,16 @@
       </div>
 
       <div class="discount-box">
-        Discount Options Placeholder:
-        <span>Kids under ___ inches</span> •
-        <span>Kids ___–___ inches</span> •
-        <span>Seniors over ___</span> •
-        <span>Cash discount</span>
+        <strong>Discount Program</strong><br>
+        Kids under <span>40 inches</span> — Free<br>
+        Kids <span>41–54 inches</span> — 50% Off<br>
+        Seniors <span>65+</span> (ID Required) — 10% Off<br>
+        Cash Payment — 5% Off
+        <br><br>
+        <small>
+          Children's and senior discounts apply to hot pot purchases only.
+          Cash discount applies to the entire bill.
+        </small>
       </div>
     </section>
 
@@ -452,7 +472,8 @@
       </div>
 
       <div class="soup-notice">
-        <span>Notice:</span> All soups are originally made with Pork Bone White Soup as the base.
+        <span>Notice:</span>
+        All soups are originally prepared using Pork Bone White Soup as the base.
         Please request a vegetarian-safe alternative if necessary.
       </div>
 
@@ -466,6 +487,21 @@
         <a class="soup-link" href="signature-tomato.html">Signature Tomato</a>
         <a class="soup-link" href="japanese-sukiyaki.html">Japanese Sukiyaki</a>
         <a class="soup-link" href="pork-bone-white-soup.html">Pork Bone White Soup</a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <div class="section-title">
+        <h2>Wagyu Add-Ons</h2>
+        <p>Premium cuts available per order. Not included in All You Can Eat.</p>
+      </div>
+
+      <div class="extra-menu-grid">
+        <a class="small-menu-link" href="wagyu.html">
+          View Wagyu Selection →
+        </a>
       </div>
     </section>
 

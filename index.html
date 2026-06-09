@@ -123,7 +123,6 @@
     .section-title {
       text-align: center;
       margin: 44px 0 24px;
-      position: relative;
     }
 
     .section-title h2 {
@@ -152,10 +151,11 @@
       border-radius: 18px;
       padding: 32px 24px;
       transition: 0.2s ease;
-      min-height: 190px;
+      min-height: 175px;
     }
 
-    .card:hover {
+    .card:hover,
+    .soup-link:hover {
       transform: translateY(-3px);
       border-color: #d4af37;
       background: #171717;
@@ -170,10 +170,6 @@
       color: #b8b1a7;
       line-height: 1.55;
       font-size: 15px;
-    }
-
-    .regular h3 {
-      color: #f5f1e8;
     }
 
     .premium {
@@ -193,11 +189,39 @@
       text-transform: uppercase;
     }
 
-    .soup-card {
-      max-width: 560px;
+    .soup-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 900px;
       margin: auto;
+    }
+
+    .soup-link {
+      text-decoration: none;
+      color: #f5f1e8;
+      background: #101010;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 14px;
+      padding: 18px 16px;
+      font-weight: 800;
+      letter-spacing: 1px;
       text-align: center;
-      min-height: auto;
+      transition: 0.2s ease;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .spicy {
+      border-color: rgba(169, 43, 36, 0.65);
+    }
+
+    .chili {
+      color: #d64232;
+      font-size: 18px;
     }
 
     .notice {
@@ -237,6 +261,10 @@
       }
 
       .level-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .soup-grid {
         grid-template-columns: 1fr;
       }
 
@@ -335,14 +363,46 @@
     <section>
       <div class="section-title">
         <h2>Choose Your Soup</h2>
-        <p>Pick your broth base to begin.</p>
+        <p>Tap a soup to view flavor notes, allergens, and photos.</p>
       </div>
 
-      <a class="card soup-card" href="soup.html">
-        <h3>Soup Selection</h3>
-        <p>View available soup bases and broth options.</p>
-        <div class="button-text">View Soups →</div>
-      </a>
+      <div class="soup-grid">
+        <a class="soup-link spicy" href="szechuan-spicy.html">
+          Szechuan Spicy <span class="chili">🌶️</span>
+        </a>
+
+        <a class="soup-link spicy" href="korean-kimchi.html">
+          Korean Kimchi <span class="chili">🌶️</span>
+        </a>
+
+        <a class="soup-link" href="taiwanese-satay.html">
+          Taiwanese Satay
+        </a>
+
+        <a class="soup-link" href="japanese-miso.html">
+          Japanese Miso
+        </a>
+
+        <a class="soup-link" href="thai-tom-yum.html">
+          Thai Tom Yum
+        </a>
+
+        <a class="soup-link" href="japanese-curry.html">
+          Japanese Curry
+        </a>
+
+        <a class="soup-link" href="signature-tomato.html">
+          Signature Tomato
+        </a>
+
+        <a class="soup-link" href="japanese-sukiyaki.html">
+          Japanese Sukiyaki
+        </a>
+
+        <a class="soup-link" href="pork-bone-white-soup.html">
+          Pork Bone White Soup
+        </a>
+      </div>
     </section>
 
     <div class="notice">

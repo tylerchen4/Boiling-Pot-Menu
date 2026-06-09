@@ -176,20 +176,19 @@
     }
 
     .price-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-top: 14px;
-    }
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
-    .price-box {
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      border-radius: 10px;
-      padding: 9px 8px;
-      text-align: center;
-      background: rgba(212, 175, 55, 0.05);
-    }
-
+.price-box {
+  border-left: 3px solid #d4af37;
+  border-radius: 0;
+  background: rgba(255,255,255,0.03);
+  padding: 8px 12px;
+  text-align: left;
+}
     .price-label {
       display: block;
       color: #a8a29e;
@@ -201,10 +200,11 @@
     }
 
     .price-value {
-      color: #d4af37;
-      font-size: 18px;
-      font-weight: 900;
-    }
+  float: right;
+  color: #d4af37;
+  font-weight: 900;
+  font-size: 17px;
+}
 
     .button-text {
       margin-top: 15px;

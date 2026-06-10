@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signature Tomato Soup</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;600;700;800&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0d0d0d;
+      color: #f5f1e8;
+      font-family: 'Montserrat', Arial, sans-serif;
+      padding: 20px 12px;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: auto;
+      padding: 28px 20px;
+      background: #121212;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 24px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .logo-area {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .logo-area img {
+      width: 330px;
+      max-width: 90%;
+    }
+
+    h1, h2 {
+      font-family: 'Cinzel', Georgia, serif;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #d4af37;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #d4af37, transparent);
+      margin: 22px 0;
+    }
+
+    .soup-card {
+      background: linear-gradient(145deg, #101010, #181818);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+   .soup-img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 14px;
+    background: #111;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+    .section-title {
+      text-align: left;
+      color: #d4af37;
+      font-size: 18px;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+
+    .description {
+      color: #b8b1a7;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .allergen-box {
+      border: 1px solid rgba(169, 43, 36, 0.55);
+      background: rgba(169, 43, 36, 0.10);
+      border-radius: 14px;
+      padding: 14px;
+      color: #f5f1e8;
+    }
+
+    .allergen-box h2 {
+      text-align: left;
+      color: #d64232;
+      font-size: 18px;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+
+    .allergen-box p {
+      color: #d6d0c7;
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .spicy-label {
+      display: inline-block;
+      margin-top: 12px;
+      color: #d64232;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 22px 14px;
+      }
+
+      .logo-area img {
+        width: 280px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .soup-img {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <a class="back-link" href="index.html">← Back to Main Menu</a>
+
+    <div class="logo-area">
+      <img src="logo.png" alt="Boiling Pot & Boba Street Logo">
+    </div>
+
+    <h1>Signature Tomato</h1>
+    <p class="subtitle">Sweet and tangy hot pot soup base</p>
+
+    <div class="divider"></div>
+
+    <section class="soup-card">
+
+      <img class="soup-img" src="placeholder.png" alt="Szechuan Spicy Soup">
+
+<div class="divider"></div>
+
+      <h2 class="section-title">Description</h2>
+      <p class="description">
+       Rich tomato-based broth with a savory balance of natural sweetness and tangy flavor.
+      </p>
+
+      <h2 class="section-title">Allergen Information</h2>
+      <div class="allergen-box">
+  <p>
+    • Soy <em><br>
+    • Wheat <em>(from Pork Bone White Soup base)</em>
+  </p>
+</div>
+
+    </section>
+
+  </main>
+</body>
+</html>

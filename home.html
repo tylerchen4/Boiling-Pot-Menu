@@ -268,28 +268,75 @@
 
     @media (max-width: 800px) {
       .navbar {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px 16px;
-      }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  min-height: 76px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8%;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
 
-      .nav-logo img {
-        width: 210px;
-      }
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
 
-      .nav-links {
-        justify-content: center;
-        gap: 14px;
-      }
+.nav-logo img {
+  width: 230px;
+  max-width: 60vw;
+}
 
-      .nav-links a {
-        font-size: 12px;
-      }
+.logo-black {
+  display: none;
+}
 
+.logo-white {
+  display: block;
+}
+
+.navbar.scrolled .logo-white {
+  display: none;
+}
+
+.navbar.scrolled .logo-black {
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: color 0.25s ease;
+}
+
+.navbar:not(.scrolled) .nav-links a {
+  color: white;
+}
+
+.navbar.scrolled .nav-links a {
+  color: #1a1a1a;
+}
       .hero {
-        height: calc(100vh - 120px);
-      }
-
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
       .hero-content h1 {
         font-size: 32px;
       }
@@ -316,18 +363,19 @@
 <body>
 
   <nav class="navbar">
-    <a class="nav-logo" href="home.html">
-      <img src="logo.png" alt="Boiling Pot & Boba Street Logo">
-    </a>
+  <a class="nav-logo" href="home.html">
+    <img class="logo-white" src="logo-white.png" alt="Boiling Pot & Boba Street Logo">
+    <img class="logo-black" src="logo-black.png" alt="Boiling Pot & Boba Street Logo">
+  </a>
 
-    <div class="nav-links">
-      <a href="index.html">Menu</a>
-      <a href="#about">About</a>
-      <a href="#info">Hours</a>
-      <a href="#jobs">Jobs</a>
-      <a href="#reviews">Reviews</a>
-    </div>
-  </nav>
+  <div class="nav-links">
+    <a href="index.html">Menu</a>
+    <a href="#about">About</a>
+    <a href="#info">Hours</a>
+    <a href="#jobs">Jobs</a>
+    <a href="#reviews">Reviews</a>
+  </div>
+</nav>
 
   <header class="hero">
     <video class="hero-video" autoplay muted loop playsinline poster="restaurant-poster.jpg">
@@ -429,6 +477,20 @@
   <footer class="footer">
     © Boiling Pot & Boba Street
   </footer>
+<script>
+  const navbar = document.querySelector('.navbar');
 
+  function updateNavbar() {
+    if (window.scrollY > 40) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }
+
+  updateNavbar();
+  window.addEventListener('scroll', updateNavbar);
+</script>
+  
 </body>
 </html>
